@@ -1,0 +1,6 @@
+from docker.io/semaphoreui/semaphore:latest
+
+user root
+run apk add --no-cache py3-pip
+run pip3 install ansible==8.1.0 prettytable
+run apk del ansible py3-pip
