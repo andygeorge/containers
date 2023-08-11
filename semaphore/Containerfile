@@ -1,18 +1,15 @@
-from docker.io/semaphoreui/semaphore:latest
+FROM docker.io/semaphoreui/semaphore:latest
 
-user root
-run apk add --no-cache py3-pip
-run apk del ansible
-
-USER 1001
-run pip3 install ansible==8.2.0 prettytable
+USER root
+RUN apk del ansible
+RUN apk add --no-cache py3-pip
+RUN rm -rf /var/cache/apk/*
 
 WORKDIR /home/semaphore
 USER 1001
+RUN pip3 install ansible==8.2.0 prettytable
+
 ENV PATH="${PATH}:/home/semaphore/.local/bin"
 ENV ANSIBLE_LIBRARY="/home/semaphore/.local/lib/python3.10/site-packages/ansible/modules"
 ENV ANSIBLE_COLLECTIONS_PATH="/home/semaphore/.local/lib/python3.10/site-packages/ansible/collections/"
 ENV PYTHONPATH="/home/semaphore/.local/lib/python3.10/site-packages"
-
-ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["/usr/local/bin/semaphore-wrapper", "/usr/local/bin/semaphore", "server", "--config", "/etc/semaphore/config.json"]
