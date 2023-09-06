@@ -7,9 +7,10 @@ RUN rm -rf /var/cache/apk/*
 
 WORKDIR /home/semaphore
 USER 1001
-RUN pip3 install ansible==8.2.0 prettytable
 
 ENV PATH="${PATH}:/home/semaphore/.local/bin"
 ENV ANSIBLE_LIBRARY="/home/semaphore/.local/lib/python3.10/site-packages/ansible/modules"
 ENV ANSIBLE_COLLECTIONS_PATH="/home/semaphore/.local/lib/python3.10/site-packages/ansible/collections/"
 ENV PYTHONPATH="/home/semaphore/.local/lib/python3.10/site-packages"
+
+RUN pip3 install ansible==8.3.0 prettytable
