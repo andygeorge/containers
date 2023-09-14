@@ -32,7 +32,7 @@ https://www.artillery.io/docs/
 
 ```sh
 # on host
-podman run -it ghcr.io/andygeorge/artillery:latest
+podman run --rm -it ghcr.io/andygeorge/artillery:latest
 
 # in container
 artillery run example-config.yml

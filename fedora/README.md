@@ -11,5 +11,5 @@ podman push "localhost/fedora:dev" "ghcr.io/andygeorge/fedora:latest"
 
 ```sh
 # on host
-podman run -it ghcr.io/andygeorge/fedora:latest
+podman run --rm -it ghcr.io/andygeorge/fedora:latest
 ```
