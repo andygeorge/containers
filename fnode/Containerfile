@@ -1,11 +1,14 @@
 FROM ghcr.io/andygeorge/fedora:latest
 
+ARG NODE_VERSION
+
 USER root
 
 RUN dnf install -y \
-	nodejs \
-	jq
-RUN npm install -g npm
+	jq \
+	npm
+RUN npm install -g n
+RUN n $NODE_VERSION
 
 RUN mkdir /root/nodestuff
 WORKDIR /root/nodestuff
