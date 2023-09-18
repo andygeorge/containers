@@ -2,7 +2,9 @@ FROM ghcr.io/andygeorge/fedora:latest
 
 USER root
 
-RUN dnf install -y nodejs
+RUN dnf install -y \
+	nodejs \
+	jq
 RUN npm install -g npm
 
 RUN mkdir /root/nodestuff
