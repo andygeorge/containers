@@ -1,0 +1,10 @@
+FROM ghcr.io/andygeorge/fedora:latest
+
+USER root
+
+RUN dnf install -y nodejs
+RUN npm install -g npm
+
+RUN mkdir /root/nodestuff
+WORKDIR /root/nodestuff
+CMD ["fish"]
