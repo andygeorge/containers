@@ -12,28 +12,3 @@ This is based off the awesome [Ansible Semaphore](https://github.com/ansible-sem
 podman build --tag "localhost/semaphore-pip-ansible:testing" -f Containerfile
 podman push "localhost/semaphore-pip-ansible:testing" "ghcr.io/andygeorge/semaphore-pip-ansible:ansible-8.3.0"
 ```
-
----
-
-## Artillery
-
-Containerized [Artillery.io](https://www.artillery.io/) load testing (https://github.com/artilleryio/artillery).
-
-### Building
-
-```sh
-podman build --tag "localhost/artillery:dev" -f Containerfile
-podman push "localhost/artillery:dev" "ghcr.io/andygeorge/artillery:latest"
-```
-
-### Running
-
-https://www.artillery.io/docs/
-
-```sh
-# on host
-podman run --rm -it ghcr.io/andygeorge/artillery:latest
-
-# in container
-artillery run example-config.yml
-```
