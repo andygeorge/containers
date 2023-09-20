@@ -1,12 +1,3 @@
-FROM ghcr.io/andygeorge/fedora:latest
-
-USER root
-
-RUN dnf install -y \
-  nodejs \
-  npm
+FROM ghcr.io/andygeorge/fnode:latest
 
 RUN npm install -g artillery@latest
-
-WORKDIR /root
-CMD ["fish"]
