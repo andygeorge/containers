@@ -6,5 +6,5 @@ This is based off the awesome [Ansible Semaphore](https://github.com/ansible-sem
 
 ```sh
 podman build --tag "localhost/semaphore-pip-ansible:testing" -f Containerfile
-podman push "localhost/semaphore-pip-ansible:testing" "ghcr.io/andygeorge/semaphore-pip-ansible:ansible-8.3.0"
+podman push "localhost/semaphore-pip-ansible:testing" "ghcr.io/andygeorge/semaphore-pip-ansible:v2.9.39-beta_ansible-8.3.0"
 ```

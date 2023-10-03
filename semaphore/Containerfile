@@ -1,4 +1,4 @@
-FROM docker.io/semaphoreui/semaphore:latest
+FROM docker.io/semaphoreui/semaphore:beta
 
 USER root
 RUN apk del ansible
