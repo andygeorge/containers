@@ -9,8 +9,9 @@ WORKDIR /home/semaphore
 USER 1001
 
 ENV PATH="${PATH}:/home/semaphore/.local/bin"
-ENV ANSIBLE_LIBRARY="/home/semaphore/.local/lib/python3.10/site-packages/ansible/modules"
-ENV ANSIBLE_COLLECTIONS_PATH="/home/semaphore/.local/lib/python3.10/site-packages/ansible/collections/"
-ENV PYTHONPATH="/home/semaphore/.local/lib/python3.10/site-packages"
+ENV ANSIBLE_LIBRARY="/home/semaphore/.local/lib/python3.11/site-packages/ansible/modules"
+ENV ANSIBLE_COLLECTIONS_PATH="/home/semaphore/.local/lib/python3.11/site-packages/ansible/collections/"
+ENV PYTHONPATH="/home/semaphore/.local/lib/python3.11/site-packages"
 
-RUN pip3 install ansible==8.3.0 prettytable
+RUN pip3 install ansible==8.4.0 prettytable
+
