@@ -1,0 +1,12 @@
+FROM ghcr.io/andygeorge/fedora:latest
+
+USER root
+
+RUN dnf install -y \
+	ghc cabal-install \
+	haskell-platform
+	# ghc-*devel
+
+RUN mkdir /root/haskellstuff
+WORKDIR /root/haskellstuff
+CMD ["fish"]
