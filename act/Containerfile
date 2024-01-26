@@ -1,0 +1,8 @@
+FROM ghcr.io/catthehacker/ubuntu:act-22.04
+
+USER root
+WORKDIR /tmp
+
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+RUN unzip /tmp/awscliv2.zip
+RUN ./aws/install
