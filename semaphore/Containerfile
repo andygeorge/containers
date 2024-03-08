@@ -13,4 +13,4 @@ ENV ANSIBLE_LIBRARY="/home/semaphore/.local/lib/python3.11/site-packages/ansible
 ENV ANSIBLE_COLLECTIONS_PATH="/home/semaphore/.local/lib/python3.11/site-packages/ansible/collections/"
 ENV PYTHONPATH="/home/semaphore/.local/lib/python3.11/site-packages"
 
-RUN pip3 install ansible==9.2.0 prettytable
+RUN pip3 install ansible==9.3.0 prettytable
