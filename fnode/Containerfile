@@ -1,5 +1,4 @@
-# FROM ghcr.io/andygeorge/fedora:latest
-FROM localhost/fedora:dev
+FROM ghcr.io/andygeorge/fedora:latest
 
 ARG NODE_VERSION
 
