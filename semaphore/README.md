@@ -5,8 +5,8 @@ This is based off the awesome [Ansible Semaphore](https://github.com/ansible-sem
 ### Build
 
 ```sh
-SEMAPHORE_VERSION="v2.9.53-beta"
-ANSIBLE_VERSION="9.3.0"
+SEMAPHORE_VERSION="v2.10.8-beta"
+ANSIBLE_VERSION="10.1.0"
 MY_VERSION="${SEMAPHORE_VERSION}_ansible-${ANSIBLE_VERSION}"
 
 podman build --tag "localhost/semaphore-pip-ansible:testing" -f Containerfile

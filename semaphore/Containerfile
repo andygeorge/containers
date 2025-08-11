@@ -1,7 +1,7 @@
-FROM docker.io/semaphoreui/semaphore:beta
+FROM docker.io/semaphoreui/semaphore:v2.10.8-beta
 
 USER root
-RUN apk del ansible
+# RUN apk del ansible
 RUN apk add --no-cache py3-pip
 RUN rm -rf /var/cache/apk/*
 
@@ -13,4 +13,4 @@ ENV ANSIBLE_LIBRARY="/home/semaphore/.local/lib/python3.11/site-packages/ansible
 ENV ANSIBLE_COLLECTIONS_PATH="/home/semaphore/.local/lib/python3.11/site-packages/ansible/collections/"
 ENV PYTHONPATH="/home/semaphore/.local/lib/python3.11/site-packages"
 
-RUN pip3 install ansible==9.3.0 prettytable
+RUN pip3 install ansible==10.1.0 prettytable

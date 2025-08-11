@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora:42-x86_64 AS fedora
+FROM quay.io/fedora/fedora:43-x86_64 AS fedora
 
 USER root
 
@@ -9,7 +9,8 @@ RUN dnf install -y \
   curl \
   wget \
   fish \
-	awk
+  awk \
+  ripgrep
 
 # RUN dnf -y clean all && rm -rf /var/cache/yum
 
