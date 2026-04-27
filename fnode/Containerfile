@@ -6,6 +6,7 @@ USER root
 
 RUN dnf install -y \
 	jq \
+	libatomic \
 	npm
 RUN npm install -g n
 RUN n $NODE_VERSION
